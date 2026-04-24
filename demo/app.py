@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import re
 import string
@@ -15,7 +15,8 @@ st.set_page_config(
 # ── Load and train model ─────────────────────────────
 @st.cache_resource
 def load_model():
-    df = pd.read_csv('../data/raw/language_dataset_milestone1.csv')
+    # ✅ FIXED PATH HERE
+    df = pd.read_csv('data/raw/language_dataset_milestone1.csv')
     
     def preprocess(text):
         text = text.lower()
